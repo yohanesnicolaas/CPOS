@@ -1,0 +1,99 @@
+Database
+> tiap table harus ada field
+	> last_update_date
+	> created_date
+	> last_update_by
+	> create_by
+> penambahan form untuk :
+	>penginputan COGS ( manual ), update COGS pake query insert jangan update. biar history COGS nya keliatan
+	>Billing
+	>profile & email notification
+> nambah table
+	>Tax
+	>Discount
+	>Refund
+
+General
+> Pemisahan menu untuk role tertentu
+
+FORM LOGIN
+> ini blom kesentuh ama gw.
+
+FORM INDEX.php
+>filter by date nya bisa langsung refresh tanpa click button submit
+>nanti ada penambahan filter outlets juga
+
+SALES_SUMMARY.PHP
+>filter by date nya bisa langsung refresh tanpa click button submit
+>ada penambahan table discount yang mengacu tiap line item
+>ada penambahan form & table REFUND.php
+>ada penambahan table tax
+
+GROSS_PROFIT.PHP
+>filter by date nya bisa langsung refresh tanpa click button submit
+>ada penambahan table discount yang mengacu tiap line item
+>ada penambahan form & table REFUND.php
+
+PAYMENT_METHOD.PHP
+>filter by date nya bisa langsung refresh tanpa click button submit
+>Mungkin ada penambahan keterangan
+
+CATEGORY_MARGIN.PHP
+>filter by date nya bisa langsung refresh tanpa click button submit
+>untuk gross margin nanti dulu perhitungannya
+>ada penambahan table discount yang mengacu tiap line item
+>ada penambahan form & table REFUND.php
+
+MASTER_ITEM.PHP
+>Penambahan Validasi kalau yang di input sudah ada di database
+>Unit price ( harga jual ) 
+>Mungkin ada penambahan item category/Descriptive flexfields untuk pendukung report
+>untuk upload file harus csv dan delimiter nya pake ';' ( info aja )
+
+MEDIA_GALLERY.PHP
+>Mungkin ada penambahan gambar ( optional )
+>Penambahann pagination
+>ada penambahan modal/form untuk review pesanan kalau sudah benar atau belom
+>kalau bisa tidak usah click tombol print. otomatis ketika kita click OK dari form sebelumnya otomatis langsung print
+
+TABLE_DYNAMIC.PHP
+>buat COGS di pikir2 dlu boleh di munculin di table inventory atau gak
+
+OUTLETS.PHP
+
+RECEIPTS.PHP
+>print receipt nanti dibedain per outlets, ada dropdown
+
+EMPLOYESS.PHP
+>bakalan ada pembagian responsibility untuk tiap" role ( optional )
+
+------------------
+Kedepannya
+
+PENAMBAHAN FORM 
+>PO
+>ACCOUNT PAYABLES
+>MUTASI ITEM
+>PERHITUNGAN cogs/ingredient
+>ADJUSTMENT STOCK
+
+
+--------------------
+FLOW
+
+Dari media_gallery.php
+-> doaddnewinvoice.php -> balik lagi ke media_gallery.php
+
+Di doaddnewinvoice insert ke table invoice dan update table inventory. 
+summary table inventory di ada file table_dynamic.php
+summary table invoice ada di file tables.invoice.php
+
+untuk sales_summary, gross_profit, payment_method , category_sales lebih main ke query dari table inventory sama invoice aja
+
+MASTER ITEM
+Dari form_validation.php - > doaddnewgoods.php -> ini insert baru
+
+
+
+
+
